@@ -12,7 +12,7 @@ const client = new Client({
 
 const EPIC_GAMES_FREE_GAMES_URL = 'https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions';
 const CHANNEL_ID = '1248603034137923658';
-const CHECK_INTERVAL = '41 18 * * *'; // every day at midnight
+const CHECK_INTERVAL = '5 19 * * *'; // every day at midnight
 
 let lastFreeGames = [];
 
