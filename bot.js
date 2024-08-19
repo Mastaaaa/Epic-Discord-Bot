@@ -23,12 +23,9 @@ client.once('ready', () => {
 });
 
 client.login('');
-
 async function checkFreeGames() {
     try {
         const response = await axios.get(EPIC_GAMES_FREE_GAMES_URL);
-        console.log(JSON.stringify(response.data, null, 2)); // Log the response data to inspect its structure
-
         const freeGames = response.data.data.Catalog.searchStore.elements.filter(game => game.promotions && game.promotions.promotionalOffers.length > 0);
 
         const newFreeGames = freeGames.filter(game => !lastFreeGames.includes(game.id));
