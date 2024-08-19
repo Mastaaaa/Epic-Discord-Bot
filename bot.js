@@ -11,7 +11,7 @@ const client = new Client({
 });
 
 const EPIC_GAMES_FREE_GAMES_URL = 'https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions';
-const CHANNEL_ID = '1248603034137923658';
+const CHANNEL_ID = '';
 const CHECK_INTERVAL = '04 12 * * *'; // every day at midnight
 
 let lastFreeGames = [];
@@ -22,7 +22,7 @@ client.once('ready', () => {
     cron.schedule(CHECK_INTERVAL, checkFreeGames);
 });
 
-client.login('MTI0ODYwMTcwNjQ5MzkwMjg2OQ.Gmil1r.NJWXsiyclldblQ40AsQWu2BvczbMMBvtf2_Bo8');
+client.login('');
 
 async function checkFreeGames() {
     try {
